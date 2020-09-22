@@ -1,0 +1,223 @@
+
+
+
+
+@media only screen and (max-width : 991px) {
+
+
+
+}
+
+
+
+@media only screen and (max-width : 767px) {
+
+	h2, .h2{
+		font-size: 150%;
+	}
+
+	a.btn-app, button.btn-app{
+		height: 6rem;
+	}
+	a.btn-app span, button.btn-app span{
+		line-height: 4.2rem;
+	}
+
+	.preloader-gray-inner, .preloader-red-inner {
+		background-size: 85vw auto;
+		position: absolute;
+	}
+	.preloader .preloader-spinner {
+		width: 5rem;
+		height: 5rem;
+	}
+	.preloader .preloader-spinner img {
+		max-width: none;
+	}
+	.preloader .preloader-title {
+		top: 10%;
+	}
+
+	#wrapper {
+		position: relative;
+		overflow: hidden;
+		height: 100vh;
+		width: 100%;
+	}
+
+	section {
+		background-size: cover;
+	}
+
+	#welcome .logo-holder img {
+		 max-width: 16rem;
+	}
+	#welcome .welcome-splash img{
+		max-width: 26rem;
+	}
+
+	form {
+		width: 100%;
+		padding: 1.5rem 1.5rem;
+	}
+	.form-group {
+		margin-bottom: 1rem;
+	}
+	.form-control{
+		padding: 1.0rem 1.5rem;
+	}
+
+	a.theme-box{
+		height: 9.5rem;
+		font-size: var(--h5);
+	}
+
+	.questions .row-header {
+		padding: 4rem 0 4rem;
+		height: 20%;
+	}
+	.questions .row-body {
+		height: 64%;
+	}
+
+	.questions .row-header > div > div{
+		padding: 0;
+	}
+	.questions .questions-indicators-holder span {
+		width: 2.8rem;
+		height: 2.8rem;
+		line-height: 2.6rem;
+		font-size: var(--h7);
+		margin-left: 0.5rem;
+	}
+	.questions .question-logo-holder img{
+		max-width: 100%;
+	}
+	.questions .row-body > .col-12 {
+		padding: 0 1.5rem;
+	}
+	.questions .questions-panel{
+		padding:  4.8rem 1.5rem 0;
+	}
+	.questions .questions-clock-holder{
+		top: 0.5rem;
+		width: 7rem;
+		height: 7rem;
+	}
+	.questions .questions-clock {
+		width: 100%;
+		height: 100%;
+	}
+	.questions .questions-time {
+		line-height: 7rem;
+		width: 100%;
+		height: 100%;
+		line-height: 6rem;
+		font-weight: 700;
+		font-size: var(--h4);
+	}
+	.questions .label{
+		font-size: var(--h7);
+		padding: 0.3rem 1.5rem;
+	}
+	.questions .question-text{
+		font-size: 2rem;
+	}
+	.questions .question-option{
+		padding: 0 1.5rem;
+		font-size: 1.6rem;
+		height: 5.5rem;
+	}
+
+
+	.answer-status .answer-result{
+		font-size: var(--h3);
+	}
+	.answer-status.success .answer-success::after,
+	.answer-status.fail .answer-fail::after,
+	.answer-status.timeout .answer-timeout::after{
+		width: 8rem;
+		height: 8rem;
+	}
+
+	#dashboard .row-header {
+		padding: 10rem 0 2rem;
+		height: 30%;
+	}
+	#dashboard .row-body {
+		height: 42%;
+	}
+	#dashboard .row-footer {
+		height: 25%;
+	}
+	#dashboard .dashboard-title, #dashboard .dashboard-subtitle {
+		font-size: var(--h3);
+	}
+	#dashboard .dashboard-subtitle {
+		font-size: var(--h3);
+	}
+	.dashboard-cup-holder img {
+		max-width: 25rem;
+	}
+	#dashboard .dashboard-numbers{
+		font-size: var(--h1x2);
+		top: 2rem;
+	}
+	#dashboard .dashboard-thanks{
+		font-size: var(--h5);
+	}
+	#dashboard .dashboard-logo-holder img {
+		max-width: 10rem;
+	}
+
+	.leads-holder {
+		font-size: var(--h7);
+	}
+
+
+}
+
+
+@media only screen and (max-width : 675px) {
+
+
+}
+
+
+@media only screen and (max-width : 575px) {
+
+
+
+
+}
+
+
+@media only screen and (max-width : 450px) {
+
+
+
+}
+
+
+@media only screen and (max-width : 450px) {
+
+
+}
+
+
+
+
+/*BOOTSTRAP OVERWRITE*/
+@media (min-width: 768px) and (max-width: 992px) {
+
+	/*
+  .container {
+	 max-width: calc(100% - 30px);
+  }
+		*/
+
+
+
+}
+
+

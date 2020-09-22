@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{country_code}" class="no-js gt-ie9" itemscope itemtype="http://schema.org/{application_type}">
+<head>
+
+	{include="master/head_meta"}
+
+	{include="master/head_inline_style"}
+
+	{include="master/head_style"}
+
+	{include="master/head_script"}
+
+	{include="master/analytics"}
+
+</head>
+
+<body id="{main_class}" class="{main_class} scroll-assist {extra_class}">
+
+	<!-- PRELOADER -->
+	<!--
+	<div id="royal_preloader"></div>
+	<div id="preloader_behind"></div>
+	-->
+	<!-- /PRELOADER -->
+
+	<!-- AJAX STATUS MESSAGES -->
+	<div class="ajax-status">
+		<div class="ajax-status-inner"></div>
+	</div>
+	<!-- AJAX STATUS MESSAGES -->
+
+	<div id="start-content" itemscope itemtype="http://schema.org/LocalBusiness">
+
+		{include="includes/header"}
+
+		<div class="main-container">
+
+			{section_content}
+
+		</div>
+
+		{include="includes/footer"}
+
+	</div>
+
+	<!-- SCROLLTOP -->
+	<!--
+	<div class="align-bottom text-center mb30">
+		<a class="btn btn-icon inner-link  btn-top" href="#top" tole="button" >
+			<span class="sr-only">{alt_back_to_top}</span>
+			<i class="ti-angle-up"></i>
+		</a>
+	</div>
+	-->
+	<!-- SCROLLTOP -->
+
+
+	<div class="modal fade" id="page-alert" tabindex="-1" role="dialog" aria-labelledby="modal-alert-title" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+		 <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title" id="modal-alert-title"></h5>
+			  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				 <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<div class="row vertical-align">
+						<div class="col-1 text-center">
+							<i id="alert-icon" class=""></i>
+						</div>
+						<div class="col-11">
+							<div id="alert-body"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="alert-btn-1 btn btn-secondary" data-dismiss="modal"></button>
+			  <button type="button" class="alert-btn-2 invisible btn btn-primary"></button>
+			</div>
+		 </div>
+	  </div>
+	</div>
+
+	{include="master/body_script"}
+
+</body>
+
+</html>

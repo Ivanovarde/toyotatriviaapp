@@ -1,0 +1,31 @@
+{
+  "name": "cordova-plugin-postrq",
+  "version": "1.0.2",
+  "description": "Cordova plugin for sending post requests from android.",
+  "cordova": {
+    "id": "cordova-plugin-postrq",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andresiggesjo/cordova-plugin-postrq.git"
+  },
+  "keywords": [
+    "appplant",
+    "background",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "André Azam Siggesjö",
+  "license": "Apache 2.0",
+  "homepage": "https://github.com/andresiggesjo/cordova-plugin-postrq#readme"
+}

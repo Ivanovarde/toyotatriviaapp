@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.toyotatrivia.app" version="29.08.20" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="postrqplugin">
+        <param name="android-package" value="de.appplant.cordova.plugin.postrq.postrqplugin" />
+    </feature>
+    <name short="Toyota Trivia">Toyota Trivia App</name>
+    <description>
+		Trivia para salon de exposición Toyota.
+	</description>
+    <author email="iv@neomedia.com.ar" href="http://neomedia.com.ar">
+		Ivan Varde
+	</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-navigation href="*://*/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="market:*" />
+    <icon src="icon_launcher.png" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="KeepRunning" value="true" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="InAppBrowserStorageEnabled" value="true" />
+    <preference name="LoadUrlTimeoutValue" value="60000" />
+</widget>

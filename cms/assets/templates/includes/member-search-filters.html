@@ -1,0 +1,69 @@
+<!-- FILTERS start -->
+<div class="container">
+	<form id="form-search-filters" class="validate" method="post" action="/" data-action="search" data-cb="showSearchResults">
+
+		<div class="row">
+
+			<div class="col-6">
+				<div class="form-group">
+					<label for="nombre" class="sr-only">Nombre</label>
+					<input class="form-control" id="nombre" name="nombre" type="text" placeholder="Nombre">
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="form-group">
+					<label for="apellido" class="sr-only">Apellido</label>
+					<input class="form-control" id="apellido" name="apellido" type="text" placeholder="Apellido">
+				</div>
+			</div>
+
+			<div class="col-6">
+				<div class="form-group">
+					<label for="email" class="sr-only">Email</label>
+					<input class="form-control" id="email" name="email" type="text" placeholder="Email">
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="form-group">
+					<label for="telefono" class="sr-only">Teléfono</label>
+					<input class="form-control" id="telefono" name="telefono" type="text" placeholder="Teléfono">
+				</div>
+			</div>
+
+			<div class="col-6">
+				<div class="form-group">
+					<label for="envio" class="">Email enviado: </label>
+					<select class="form-control" name="envio">
+						<option value="">Todos</option>
+						<option value="SI">Sí</option>
+						<option value="NO">No</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="form-group">
+					<label for="tipo_vehiculo" class="">Tipo vehículo</label>
+					<select class="form-control" name="tipo_vehiculo">
+						<option value="">Todos</option>
+						<option value="bus">Bus</option>
+						<option value="camiones">Camiones</option>
+						<option value="vito">Vito</option>
+						<option value="sprinter">Sprinter</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col-12">
+				<div class="form-group">
+					<button type="submit" class="search-list btn btn-primary">Buscar</button>
+
+					<button type="button" class="export-list btn btn-primary" data-element-type="member">Exportar XLS</button>
+				</div>
+			</div>
+
+			<input type="hidden" name="element_type" value="member">
+
+		</div>
+	</form>
+</div>
+<!-- FILTERS end -->

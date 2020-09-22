@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>{site_name} Información plan de ahorro</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--[if mso]>
+		<style type=”text/css”>
+		.fallback-font {
+			font-family: sans-serif, Arial;
+		}
+		</style>
+	<![endif]-->
+
+</head>
+
+<body style="margin: 0 auto;  padding: 0; border: none; width: 600px; background: #fff; color: #fff;; font-family: arial, arial, sans-serif; font-size: 12px; -webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;" bgcolor="#fff">
+
+	<style>
+		a, a:link, a:active, a:visited, a:hover {
+			border: none;
+			color: inherit;
+			text-decoration: none;
+		}
+		table#info th, table#info td {
+			font-weight: 400;
+			padding: 0;
+			vertical-align: top;
+			font-family: arial, arial, sans-serif;
+			text-align: left;
+			font-size: 14px;
+			font-weight: 400;
+
+		}
+		table#info th > div, table#info td > div {
+			padding: 10px 10px 5px 0px;
+			display: block;
+			overflow: hidden;
+		}
+		table#info td {
+			padding-right: 0;
+		}
+		#social a{
+			border-radius: 50%;
+			overflow: hidden;
+			display: inline-block;
+			width: 25px;
+			height: 23px;
+			margin-right: 5px;
+		}
+	</style>
+
+
+	<table align="center" width="600" cellpadding="0" cellspacing="0" border="0" style="margin: 0; padding: 0; border: none; width: 600px; background: #000;">
+
+		<tr>
+			<td valign="bottom" height="90" style="height: 90px; position: relative;">
+
+				<table style="background: #000; width: 600px; height: 90px;" valign="center" height="90" width="600" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td align="center">
+							<img src="https://mercedesappcms.neomedia.com.ar/mailing/header-black.jpg" alt="Mercedes-Benz Plan de ahorro">
+						</td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+
+		<tr>
+			<td align="left" valign="bottom" style="background: #fff;">
+				<div style="padding: 25px 40px;">
+
+					<img src="{imagen}" alt="Imagen Vehículo" style="width: 100%; height: auto; margin: 0 0 0px;">
+
+					<!--<h2 style=" color: #000; font-size: 38px; font-family: times new roman; font-weight: 400; letter-spacing: -0.04em;">{modelo}<br>{plan}</h2>-->
+
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td valign="bottom">
+				<div style="padding: 30px 40px; background-color: #2aace3;">
+					<div>
+						<img src="https://mercedesappcms.neomedia.com.ar/mailing/text-gracias-por-tu-consulta.gif" style="width: 350px; margin-bottom: 20px;" alt="Gracias por tu consulta">
+					</div>
+					<div style="font-size: 22px; font-family: times new roman; font-weight: 400; letter-spacing: -0.04em;">
+
+						<p>
+							A continuación te enviamos la información sobre tu plan:
+						</p>
+
+						<p style="margin-bottom: 0px;">
+							{modelo}<br>
+							{plan}
+						</p>
+						<p style="margin-top: 10px;">
+							Cantidad de cuotas: {cuotas}<br>
+							Total cuota mensual: ${cuota_mensual}
+						</p>
+
+					</div>
+					<!--
+					<h1 style="font-size: 36px; margin: 0 0 10px;font-weight: 300;">
+						¡Gracias por tu consulta!<br>
+						<span style="font-size: 32px;">Tu Plan de Ahorro.</span>
+					</h1>
+					-->
+
+					<!--
+					<h3 style="font-size: 22px; margin: 0; font-weight: 300;">Cantidad de cuotas {cuotas}</h3>
+					<h3 style="font-size: 22px;margin: 0; font-weight: 300;">Total cuota mensual ${cuota_mensual}</h3>
+					-->
+
+					<!--<hr style="border: none; border-bottom: 1px dotted #ffffff; margin: 0 -10px 25px;">-->
+				</div>
+			</td>
+		</tr>
+
+		<tr>
+			<td align="center" valign="bottom">
+				<div style="padding: 20px 40px 0px;">
+
+					<table id="info" valign="center" width="100%" cellpadding="0" cellspacing="0" border="0" style="text-align: left; width: 100%; font-family: arial, arial, sans-serif;">
+						<tr>
+							<th style="width: 58%; "><div style="padding: 7px 10px 2px 0px;">Fecha</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">{date_today}</div></td>
+						</tr>
+						<tr>
+							<th><div style="padding: 7px 10px 2px 0px;">Tipo de vehiculo</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">{tipo_vehiculo}</div></td>
+						</tr>
+						<tr>
+							<th><div style="padding: 7px 10px 2px 0px;">Linea</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">{linea}</div></td>
+						</tr>
+						<tr>
+							<th><div style="padding: 7px 10px 2px 0px;">Modelo</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">{modelo}</div></td>
+						</tr>
+						<tr>
+							<th><div style="padding: 7px 10px 2px 0px;">Precio vehículo con IVA</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">${precio_publico}</div></td>
+						</tr>
+						<tr>
+							<th><div style="padding: 7px 10px 2px 0px;">Tipo de plan</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">{plan}</div></td>
+						</tr>
+						<tr>
+							<th><div style="padding: 7px 10px 2px 0px;">Cantidad de Cuotas</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">{cuotas}</div></td>
+						</tr>
+						<tr>
+							<th><div style="padding: 7px 10px 2px 0px;">Cuota Pura</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">${cuota_pura}</div></td>
+						</tr>
+						<tr>
+							<th><div style="padding: 7px 10px 2px 0px;">Carga administrativa + derecho de suscrip.</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">${carga_admin_suscripcion}</div></td>
+						</tr>
+						<tr>
+							<th><div style="padding: 7px 10px 2px 0px;">IVA (Carga administrativa + derecho de suscrip.)</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">${iva_21}</div></td>
+						</tr>
+						<tr>
+							<th><div style="padding: 7px 10px 2px 0px;">Total cuota mensual</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">${cuota_mensual}</div></td>
+						</tr>
+						<tr>
+							<th><div style="padding: 7px 10px 2px 0px;">Alícuota extraordinaria (30%)</div></th>
+							<td><div style="padding: 7px 10px 2px 0px;">${pago_adjudicacion_30}</div></td>
+						</tr>
+
+					</table>
+
+				</div>
+
+				<div style="padding: 20px 40px 20px;">
+					<!--<hr style="border: none; border-bottom: 1px solid #424244; margin: 25px -10px;">-->
+					<div style="margin: 0 -10px; padding: 20px 10px 0; border-top: 1px solid #424244; font-family: arial, arial, sans-serif;font-size:11px; text-align: left;">
+						NOTA: Los valores aquí expresados son solamente de referencia y se calculan en base a la lista de precios vigente al 31/03/2020. Las cuotas se ajusta según el valor móvil del vehículo suscripto. Precios válidos para personas residentes en la República Argentina excepto Tierra del Fuego que tiene un tratamiento impositivo distinto. Para mayor asesoramiento comuníquese al 0800-888-2262 o a <a href="mailto:plandeahorro@mercedes-benz.com.ar" target="_blank" style="color: #fff; text-decoration: none;">plandeahorro@mercedes-benz.com.ar</a>
+					</div>
+				</div>
+
+			</td>
+		</tr>
+
+		<tr>
+			<td align="left" valign="bottom">
+				<table valign="center" height="80" width="100%" cellpadding="0" cellspacing="0" border="0" style="width:100%; border-top: 1px solid #fff;">
+					<tr>
+						<td align="left">
+							<div id="social" style="padding-left: 30px;">
+								<a href="https://www.facebook.com/VehiculosComercialesMercedesBenzArg/" target="_blank" title="Facebook"><img src="https://mercedesappcms.neomedia.com.ar/mailing/icon-fb.gif" alt="Mercedes-Benz Facebook" style="width: 23px;"></a>
+								<a href="https://www.instagram.com/mercedesbenzvans_arg/" target="_blank" title="Instagram"><img src="https://mercedesappcms.neomedia.com.ar/mailing/icon-in.gif" alt="Mercedes-Benz Instagram"  style="width: 23px;"></a>
+								<a href="https://www.youtube.com/user/MercedesBenzArgentin" target="_blank" title="Youtube"><img src="https://mercedesappcms.neomedia.com.ar/mailing/icon-yt.gif" alt="Mercedes-Benz Youtube"  style="width: 23px;"></a>
+								<a href="http://www2.mercedes-benz.com.ar/callclient/client.php?locale=sp&style=simplicity&noagents=0&url=http%3A//www2.mercedes-benz.com.ar/CALLCLIENT/CLIENTE.HTML&referrer=" target="_blank" title="Chat"><img src="https://mercedesappcms.neomedia.com.ar/mailing/icon-bl.gif" alt="Mercedes-Benz Blog"  style="width: 23px;"></a>
+							</div>
+						</td>
+						<td align="right">
+							<div style="padding-right: 30px; text-align: right;">
+								<a href="http://www.plandeahorro.mercedes-benz-com.ar" style="color: #fff; text-decoration: none;" target="_blank">www.plandeahorro.mercedes-benz.com.ar</a>
+							</div>
+						</td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+
+	</table>
+
+
+</body>
+
+</html>

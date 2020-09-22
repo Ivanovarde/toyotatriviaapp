@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Toyota Trivia App</string>
+    <string name="launcher_name">Toyota Trivia</string>
+    <string name="activity_name">@string/launcher_name</string>
+</resources>

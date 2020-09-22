@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="" class="no-js gt-ie9 locked" itemscope itemtype="http://schema.org/website">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Toyota Trivia</title>
+
+	<!-- Website -->
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Mobile -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Security-Policy" content="connect-src *; default-src *; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; script-src-elem * 'unsafe-inline' 'unsafe-eval'; img-src * data:;">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- Preload max priority fonts -->
+	<!--
+	<link rel="preload" href="assets/fonts/diediedi-regular.woff2" as="font">
+	<link rel="preload" href="assets/fonts/TrajanSansPro-Regular.woff" as="font">
+	<link rel="preload" href="assets/fonts/TrajanSansPro-Bold.woff" as="font">
+	-->
+
+	<link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
+	<link rel="manifest" href="assets/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<style>
+
+		/*Regular*/
+		@font-face {
+			font-family: 'toyotatext';
+			src: url('assets/fonts/toyota-text-regular.woff') format('woff'),
+				url('assets/fonts/toyota-text-regular.woff2') format('woff2'),
+				url('assets/fonts/toyota-text-regular.ttf') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: auto;
+		}
+
+		/*Italic*/
+		@font-face {
+			font-family: 'toyotatext';
+			src: url('assets/fonts/toyota-text-italic.woff') format('woff'),
+				url('assets/fonts/toyota-text-italic.woff2') format('woff2'),
+				url('assets/fonts/toyota-text-italic.ttf') format('truetype');
+			font-weight: 400;
+			font-style: italic;
+			font-display: auto;
+		}
+
+		/*Bold*/
+		@font-face {
+			font-family: 'toyotatext';
+			src: url('assets/fonts/toyota-text-bold.woff') format('woff'),
+				url('assets/fonts/toyota-text-bold.woff2') format('woff2'),
+				url('assets/fonts/toyota-text-bold.ttf') format('truetype');
+			font-weight: 700;
+			font-style: normal;
+			font-display: auto;
+		}
+
+		/*Bold italic*/
+		@font-face {
+			font-family: 'toyotatext';
+			src: url('assets/fonts/toyota-text-bold-italic.woff') format('woff'),
+				url('assets/fonts/toyota-text-bold-italic.woff2') format('woff2'),
+				url('assets/fonts/toyota-text-bold-italic.ttf') format('truetype');
+			font-weight: 700;
+			font-style: italic;
+			font-display: auto;
+		}
+
+
+		/*Regular*/
+		@font-face {
+			font-family: 'toyotadisplay';
+			src: url('assets/fonts/toyota-display-regular.woff') format('woff'),
+				url('assets/fonts/toyota-display-regular.woff3') format('woff2'),
+				url('assets/fonts/toyota-display-regular.ttf') format('truetype');
+			font-weight: 400;
+			font-style: normal;
+			font-display: auto;
+		}
+
+		/*Bold*/
+		@font-face {
+			font-family: 'toyotadisplay';
+			src: url('assets/fonts/toyota-display-bold.woff') format('woff'),
+				url('assets/fonts/toyota-display-bold.woff3') format('woff2'),
+				url('assets/fonts/toyota-display-bold.ttf') format('truetype');
+			font-weight: 700;
+			font-style: normal;
+			font-display: auto;
+		}
+
+		/*Heavy*/
+		@font-face {
+			font-family: 'toyotadisplay';
+			src: url('assets/fonts/toyota-display-heavy.woff') format('woff'),
+				url('assets/fonts/toyota-display-heavy.woff3') format('woff2'),
+				url('assets/fonts/toyota-display-heavy.ttf') format('truetype');
+			font-weight: 900;
+			font-style: normal;
+			font-display: auto;
+		}
+
+
+		/*Fontawesome*/
+		@font-face {
+			font-family: "Font Awesome 5 Brands";
+			src: url(assets/fonts/font-awesome-5-pro/fa-brands-400.woff2) format("woff2"),
+				url(assets/fonts/font-awesome-5-pro/fa-brands-400.woff) format("woff"),
+				url(assets/fonts/font-awesome-5-pro/fa-brands-400.ttf) format("truetype"),
+				url(assets/fonts/font-awesome-5-pro/fa-brands-400.svg#fontawesome) format("svg"),
+				url(assets/fonts/font-awesome-5-pro/fa-brands-400.eot?#iefix) format("embedded-opentype");
+			font-style: normal;
+			font-weight: normal;
+			font-display: auto;
+		}
+
+		@font-face {
+			font-family: "Font Awesome 5 Pro";
+			src: url(assets/fonts/font-awesome-5-pro/fa-light-300.woff2) format("woff2"),
+				url(assets/fonts/font-awesome-5-pro/fa-light-300.woff) format("woff"),
+				url(assets/fonts/font-awesome-5-pro/fa-light-300.ttf) format("truetype"),
+				url(assets/fonts/font-awesome-5-pro/fa-light-300.svg#fontawesome) format("svg"),
+				url(assets/fonts/font-awesome-5-pro/fa-light-300.eot?#iefix) format("embedded-opentype");
+			font-style: normal;
+			font-weight: 300;
+			font-display: auto;
+		}
+
+		@font-face {
+			font-family: "Font Awesome 5 Pro";
+			src: url(assets/fonts/font-awesome-5-pro/fa-regular-400.woff2) format("woff2"),
+				url(assets/fonts/font-awesome-5-pro/fa-regular-400.woff) format("woff"),
+				url(assets/fonts/font-awesome-5-pro/fa-regular-400.ttf) format("truetype"),
+				url(assets/fonts/font-awesome-5-pro/fa-regular-400.svg#fontawesome) format("svg")l
+				url(assets/fonts/font-awesome-5-pro/fa-regular-400.eot?#iefix) format("embedded-opentype");
+			font-style: normal;
+			font-weight: 400;
+			font-display: auto;
+		}
+
+		@font-face {
+			font-family: "Font Awesome 5 Pro";
+			src: url(assets/fonts/font-awesome-5-pro/fa-solid-900.woff2) format("woff2"),
+				url(assets/fonts/font-awesome-5-pro/fa-solid-900.woff) format("woff"),
+				url(assets/fonts/font-awesome-5-pro/fa-solid-900.ttf) format("truetype"),
+				url(assets/fonts/font-awesome-5-pro/fa-solid-900.svg#fontawesome) format("svg"),
+				url(assets/fonts/font-awesome-5-pro/fa-solid-900.eot?#iefix) format("embedded-opentype");
+			font-style: normal;
+			font-weight: 900;
+			font-display: auto;
+		}
+
+	</style>
+
+	<link rel="stylesheet" href="assets/stylesheets/library/bootstrap/bootstrap.css">
+	<link rel="stylesheet" href="assets/stylesheets/library/font-awesome-pro-all-5.7.2.min.css">
+	<link rel="stylesheet" href="assets/stylesheets/style.css">
+	<link rel="stylesheet" href="assets/stylesheets/media.css">
+
+</head>
+
+<body class="home">
+
+	<div id="sections">
+		<a href="#" class="change-section" data-target="#welcome">welcome</a>
+		<a href="#" class="change-section" data-target="#user-data">user data</a>
+		<a href="#" class="change-section" data-target="#themes">themes</a>
+		<a href="#" class="change-section" data-target="#questions">q1</a>
+		<a href="#" class="change-section" data-target="#dashboard">dashboard</a>
+	</div>
+
+	<!-- PRELOADER -->
+	<div class="preloader">
+		<div class="preloader-gray">
+			<div class="preloader-gray-inner"></div>
+		</div>
+		<div class="preloader-red">
+			<div class="preloader-red-inner"></div>
+		</div>
+		<div class="preloader-title">
+			<div class="h2 text-shadow color-white text-center font-bold">Tu juego comienza<br>en unos instantes</div>
+		</div>
+		<div class="preloader-spinner">
+			<figure class="">
+				<img src="assets/images/spinner.svg" alt="">
+			</figure>
+		</div>
+	</div>
+	<!-- /PRELOADER -->
+
+	<!-- AJAX STATUS MESSAGES -->
+	<div class="ajax-status">
+		<div class="ajax-status-inner"></div>
+	</div>
+	<!-- AJAX STATUS MESSAGES -->
+
+	<main id="wrapper" itemscope itemtype="http://schema.org/LocalBusiness">
+
+		<section>
+
+			<div id="welcome" class="layout">
+				<div class="layout-inner">
+					<div class="container-fluid h-100">
+
+						<div class="row row-header align-content-center justify-content-center">
+							<div class="col-12 col-sm-8 text-center scale-img">
+								<figure class="logo-holder">
+									<img src="assets/images/logo-toyota-text-white.png" alt="Toyota Logo">
+								</figure>
+							</div>
+						</div>
+
+						<div class="row row-body align-content-center">
+							<div class="col-12 text-center scale-img">
+
+								<div class=" color-white h2 font-secondary">Bienvenidos a</div>
+
+								<hr class="sep-1">
+
+								<figure class="welcome-splash">
+									<img src="assets/images/text-trivia-toyota.png" alt="Trivia Toyota">
+								</figure>
+
+								<hr class="sep-1">
+
+								<div class="text-center color-white h2 font-secondary font-bold">
+									¡Demostrá cuánto<br>sabés sobre nosotros!
+								</div>
+
+							</div>
+						</div>
+
+						<div class="row row-footer align-content-center">
+							<div class="col-12">
+								<a id="" href="#" class="btn btn-app change-section" data-target="#user-data">
+									<span>jugar</span>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div id="user-data" class="layout">
+				<div class="layout-inner">
+					<div class="container-fluid h-100">
+
+						<div class="row row-header align-content-center justify-content-center">
+							<div class="col-12 col-sm-8">
+								<div class="text-center color-white h2 font-secondary font-bold">Completá tus datos para participar</div>
+							</div>
+						</div>
+
+						<div class="row row-body align-content-center">
+							<div class="col-12">
+								<form id="form-lead" class="validate">
+									<div class="form-group">
+										<input type="text" name="firstname" class="validate:{required: true} form-control" placeholder="Nombre">
+									</div>
+									<div class="form-group">
+										<input type="text" name="lastname" class="validate:{required: true} form-control" placeholder="Apellido">
+									</div>
+									<div class="form-group">
+										<input type="text" name="email" class="validate:{required: true, email: true} form-control" placeholder="Email">
+									</div>
+									<div class="form-group">
+										<input type="number" name="age" class="validate:{required: true, numeric: true} form-control" placeholder="Edad" maxlength="3">
+									</div>
+									<div class="form-group">
+										<input type="number" name="dni" class="validate:{required: true, numeric: true} form-control" placeholder="DNI" maxlength="8">
+									</div>
+									<div class="form-group">
+										<input type="text" name="city" class="validate:{required: true} form-control" placeholder="Localidad">
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<div class="row row-footer align-content-center">
+							<div class="col-12">
+								<a id="" href="#" class="btn btn-app change-section" data-target="#themes">
+									<span>siguiente</span>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div id="themes" class="layout">
+				<div class="layout-inner">
+					<div class="container-fluid h-100">
+
+						<div class="row row-header align-content-center justify-content-center">
+							<div class="col-12 col-sm-8">
+								<div class="text-center color-white h2 font-secondary font-bold">Elegí dos temas sobre los que querés contestar</div>
+							</div>
+						</div>
+
+						<div class="row row-body align-content-center">
+							<div class="col-12">
+								<div class="container-fluid p-0">
+
+									<div class="row themes-holder">
+										<div class="col-6 col-sm-4"><a href="#" class="theme-box" data-bg="green" data-theme="historia"><span>Historia</span></a></div>
+										<div class="col-6 col-sm-4"><a href="#" class="theme-box" data-bg="yellow" data-theme="tps"><span>TPS</span></a></div>
+										<div class="col-6 col-sm-4"><a href="#" class="theme-box" data-bg="orange" data-theme="innovacion"><span>Innovación y<br>tecnología</span></a></div>
+										<div class="col-6 col-sm-4"><a href="#" class="theme-box" data-bg="blue" data-theme="gazoo"><span>Gazoo<br>Racing</span></a></div>
+										<div class="col-6 col-sm-4"><a href="#" class="theme-box" data-bg="purple" data-theme="sustentabilidad"><span>Sustenta-<br>bilidad</span></a></div>
+										<div class="col-6 col-sm-4"><a href="#" class="theme-box" data-bg="pink" data-theme="producto"><span>Producto</span></a></div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="row row-footer align-content-center">
+							<div class="col-12">
+								<a id="" href="#" class="btn btn-app change-section" data-target="#questions">
+									<span>comenzar</span>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div id="questions" class="layout questions">
+				<div class="layout-inner">
+					<div class="container-fluid h-100">
+
+						<div class="row row-header align-items-center">
+							<div class="col-12">
+
+								<div class="container-fluid h-100">
+									<div class="row align-items-center">
+
+										<div class="col-5 col-sm-6 question-logo-holder">
+											<figure class="scale-img">
+												<img src="assets/images/text-trivia-toyota.png" alt="">
+											</figure>
+										</div>
+
+										<div class="col-7 col-sm-6 questions-indicators-holder">
+											<span class="question-indicator-01"><em>1</em></span>
+											<span class="question-indicator-02"><em>2</em></span>
+											<span class="question-indicator-03"><em>3</em></span>
+											<span class="question-indicator-04"><em>4</em></span>
+											<span class="question-indicator-05"><em>5</em></span>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="row row-body align-content-start">
+							<div class="col-12 h-100">
+
+								<div class="container-fluid questions-panel">
+
+									<div class="questions-clock-holder">
+										<div class="questions-clock">
+											<div class="questions-time">10</div>
+										</div>
+									</div>
+
+									<div class="row h-100">
+
+										<div class="col-12 question-list">
+
+										</div>
+
+									</div>
+
+								</div>
+
+							</div>
+						</div>
+
+						<div class="row row-footer align-content-center">
+							<div class="col-12">
+
+								<div class="container-fluid h-100">
+									<div class="row">
+										<div class="col-12">
+
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div id="dashboard" class="layout">
+				<div class="layout-inner">
+					<div class="container-fluid h-100">
+
+						<div class="end-game-holder">
+							<a href="#" class="end-game"><em class="fa fa-times"></em></a>
+						</div>
+
+						<div class="row row-header align-content-center justify-content-center">
+
+							<div class="col-12 header-inner">
+								<div class="dashboard-title">¡Buen trabajo!</div>
+								<div class="dashboard-subtitle">¡Tenés un gran conocimiento sobre Toyota!</div>
+							</div>
+
+						</div>
+
+						<div class="row row-body align-content-center">
+							<div class="col-12">
+								<div class="container-fluid p-0">
+
+									<div class="row">
+										<div class="col-12">
+											<div class="dashboard-cup-holder scale-img">
+												<figure>
+													<img src="assets/images/trofeo.png" alt="">
+													<div class="dashboard-numbers"><span class="dashboard-success-length">1</span>/ <span class="dashboard-questions-maxlength"></span></div>
+												</figure>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="row row-footer align-content-start text-center">
+							<div class="col-12 footer-inner">
+								<div class="dashboard-thanks">¡Muchas gracias por participar!</div>
+								<div class="dashboard-logo-holder scale-img">
+									<figure>
+										<img src="assets/images/logo-toyota-text-white.png" alt="">
+									</figure>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="answer-status">
+				<div class="container-fluid h-100">
+					<div class="row h-100 align-content-end">
+						<div class="col-12 answer-status-inner">
+							<div class="answer-success">
+								<div class="answer-result">
+									<span>¡CORRECTO!</span>
+								</div>
+							</div>
+							<div class="answer-fail">
+								<div class="answer-result">
+									<span>¡INCORRECTO!</span>
+								</div>
+							</div>
+							<div class="answer-timeout">
+								<div class="answer-result">
+									<span>¡Se agotó tu tiempo!</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+	</main>
+
+	<footer class="on">
+		<div class="container">
+			<div class="row">
+				<div id="settings" class="col-sm-12">
+
+					<button id="cpanel-open" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#cpanel">
+						<em class="fa fa-cog"></em>
+					</button>
+
+					<div id="icons-container">
+						<span class="icon-container leads-show">
+							<em class="fa fa-user"></em> <span id="pending-records-total" class="badge">0</span>
+						</span>
+						<span class="icon-container">
+							<em class="fa fa-plug net-status"></em>
+						</span>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Modal -->
+	<div class="modal fade" id="cpanel" tabindex="-1" role="dialog" aria-labelledby="cpanel-label">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title" id="cpanel-label">Panel de control</div>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+
+					<div class="container-fluid p-0">
+						<div class="row">
+
+							<!--URL server-->
+							<div class="col-12 form-field-group">
+								<label for="settings-server-url">URL del servidor</label>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<em class="input-group-text fa fa-link"></em>
+									</div>
+									<input id="settings-server-url" type="text" class="input-url form-control" placeholder="URL del servidor">
+									<div class="input-group-append">
+										<button id="change-server-url" class="btn btn-primary" type="button">Aceptar</button>
+									</div>
+								</div>
+							</div>
+
+							<!--URL datos-->
+							<!--
+							<div class="col-12 form-field-group">
+								<label for="settings-server-url">URL de contenido (relativa al servidor)</label>
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<em class="input-group-text fa fa-link"></em>
+									</div>
+									<input id="settings-data-url" type="text" class="input-url form-control" placeholder="URL de actualización contenidos">
+									<div class="input-group-append">
+										<button id="change-data-url" class="btn btn-primary" type="button">Aceptar</button>
+									</div>
+								</div>
+							</div>
+							-->
+
+							<!--Guardar contactos-->
+							<div class="col-12">
+
+								<div class="input-group">
+									<div class="input-group-prepend ">
+										<em class="input-group-text fa fa-user border-bottom-only bg-transparent"></em>
+									</div>
+									<span class="form-control border-bottom-only">Exportar contactos *</span>
+									<div class="input-group-append">
+										<button id="btn-sync-records" class="btn btn-primary" type="button">Aceptar <em></em></button>
+									</div>
+								</div>
+
+							</div>
+
+							<div id="warning" class="col-12 my-4">
+
+								<small>* Requiere conexión a internet</small>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<div class="container-fluid p-0">
+						<div class="row">
+							<div class="col-8 col-sm-6">
+								<div id="modal-status" class=""></div>
+							</div>
+							<div class="col-4 col-sm-6 text-right">
+								<button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Modal mensages-->
+	<div class="modal fade" id="page-alert" tabindex="-1" role="dialog" aria-labelledby="modal-alert-title" aria-hidden="true">
+		<div class="modal-dialog modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal-title" id="modal-alert-title"></div>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				</div>
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row align-content-start">
+							<div id="alert-icon-container" class="col-2 col-sm-1">
+								<em id="alert-icon" class=""></em>
+							</div>
+							<div id="alert-body-container" class="col-10 col-sm-11">
+								<div id="alert-body"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="container-fluid">
+						<div class="row justify-content-end">
+							<button type="button" class="alert-btn-1 btn btn-primary" data-dismiss="modal"></button>
+							<button type="button" class="alert-btn-2 hidden btn btn-primary"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Panel leads-->
+	<div class="leads-holder">
+		<div class="card">
+			<!-- Default panel contents -->
+
+			<div class="card-header panel-heading">
+				<div class="h3">Contactos en este dispositivo</div>
+				<button type="button" class="close leads-show" aria-label="Close"><span aria-hidden="true">×</span></button>
+			</div>
+
+			<div class="card-body panel-body">
+				<p>Los siguientes contactos se encuentran almacenados en este dispositivo y aún no han sido exportados al servidor. Para exportarlos, entrar al panel de control y presionar en <strong>"Exportar contactos"</strong></p>
+			</div>
+
+			<div class="card-footer panel-footer">
+				<div class="table-responsive">
+					<!-- Table -->
+					<table id="leads-list" class="table">
+
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- JS FILES -->
+	<script type="text/javascript" src="cordova.js"></script>
+
+	<script src="assets/scripts/library/modernizr-custom.js"></script>
+	<script src="assets/scripts/library/jquery-3.4.1.min.js"></script>
+	<script src="assets/scripts/library/bootstrap/bootstrap.bundle.js"></script>
+	<script src="assets/scripts/library/jquery-livequery.1.0.2.js"></script>
+	<script src="assets/scripts/library/jquery-afterresize.js"></script>
+	<script src="assets/scripts/app.js"></script>
+	<script src="assets/scripts/library/jquery.form.js"></script>
+	<script src="assets/scripts/library/iv-common-light-1.0.js"></script>
+	<script src="assets/scripts/library/iv-validator.3.5.js"></script>
+	<script src="assets/scripts/library/iv-validator-regional-es.js"></script>
+	<script src="assets/scripts/main-content.js"></script>
+	<script src="assets/scripts/leads.js"></script>
+	<script src="assets/scripts/main.js"></script>
+	<!--<script src="assets/scripts/ivano.js"></script>-->
+
+
+</body>
+
+</html>

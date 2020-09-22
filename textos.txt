@@ -1,0 +1,71 @@
+
+FORO
+https://stackoverflow.com/questions/15184567/is-local-storage-for-a-phonegap-app-on-an-android-device-separate-from-the-built?rq=1
+https://stackoverflow.com/questions/9290943/do-phonegap-apps-reset-themselves-on-app-update?rq=1
+https://stackoverflow.com/questions/57063391/how-could-i-recover-data-from-the-localstore-of-a-phonegap-build-installed-app
+
+
+
+POSIBIIDADES PARA EMVIOS PMASIVOS DESDE EE
+
+POSTMASTER
+https://expressionengine.stackexchange.com/questions/19256/automated-newsletter-from-expressionengine-with-native-or-external-mailing-servi
+
+FIREMAIL
+https://putyourlightson.com/expressionengine-addons/firemail
+
+EMAIL FROM TEMPLATE
+https://rog.ee/email_from_template/
+https://devot-ee.com/add-ons/email-from-template
+
+EMAIL TEMPLATE
+https://docs.reinos.nl/email-template/#how-it-works
+
+NOTIFY CONTROL
+https://devot-ee.com/add-ons/mx-notify-control
+
+EXPORTIT
+https://devot-ee.com/add-ons/export-it
+
+SENDEMAIL
+https://devot-ee.com/add-ons/send-email
+
+POSTMAN
+https://devot-ee.com/add-ons/postman
+
+SUBSCRIBER
+https://devot-ee.com/add-ons/subscriber
+
+PARSEMAIL
+https://devot-ee.com/add-ons/parsemail
+
+CAMPAIGNER
+https://devot-ee.com/add-ons/campaigner
+
+https://expressionengine.stackexchange.com/questions/18067/expressionengine-send-custom-field-in-new-member-registration-email
+
+https://expressionengine.stackexchange.com/questions/32341/freeform-and-dynamic-email-recipients
+
+https://expressionengine.stackexchange.com/questions/17882/custom-member-variables-in-admin-notification-email
+
+
+Proxy error for url: http://mercedesappcms.nmd/system/php/actions.php?action=store&time=1560722782
+Proxy error for url: http://mercedesappcms.nmd/system/php/actions.php?action=store&time=1560722782
+Proxy error for url: http://mercedesappcms.nmd/system/php/actions.php?action=store&time=1
+
+
+ /proxy/http%3A%2F%2Fmercedesappcms.nmd%2Fsystem%2Fphp%2Factions.php%3Faction%3Dstore%26time%3D1560729667
+ /proxy/http%3A%2F%2Fmercedesappcms.nmd%2Fsystem%2Fphp%2Factions.php%3Faction%3Dstore%26time%3D1560729667
+ syncStoredLeads: end
+ syncStoredLeads: end
+ http://192.168.1.8:3000/__api__/autoreload
+ http://192.168.1.8:3000/__api__/autoreload
+ sendRecord: Fail:
+ sendRecord: Fail:
+ [object Object]
+ [object Object]
+ error
+ error560722782
+500 http://mercedesappcms.nmd/system/php/actions.php?action=store&time=1560722782
+
+net::ERR_CONNECTION_REFUSED

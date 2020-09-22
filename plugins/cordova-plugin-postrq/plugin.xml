@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-postrq"
+        version="1.0.2">
+
+    <name>postrq</name>
+
+    <description>
+        Cordova plugin for sending post requests from android
+    </description>
+
+    <repo>https://github.com/andresiggesjo/cordova-plugin-postrq.git</repo>
+
+    <keywords>appplant, background</keywords>
+
+    <license>Apache 2.0</license>
+
+    <author>André Azam Siggesjö</author>
+
+    <!-- dependencies -->
+    <dependency id="cordova-plugin-device" />
+
+    <!-- cordova -->
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+
+
+
+    
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="postrqplugin" >
+                <param name="android-package"
+                      value="de.appplant.cordova.plugin.postrq.postrqplugin"/>
+            </feature>
+        </config-file>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <preference name="KeepRunning" value="true" />
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+
+           
+
+        </config-file>
+
+        <source-file
+            src="src/android/postrqplugin.java"
+            target-dir="src/de/appplant/cordova/plugin/postrq" />
+
+       
+
+    </platform>
+
+    
+</plugin>
