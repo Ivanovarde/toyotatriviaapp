@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.toyotatrivia.app" version="29.08.20" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.toyotatrivia.app" varsionCode="1" version="29.08.20" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
@@ -36,6 +36,9 @@
     <icon src="icon_launcher.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="KeepRunning" value="true" />
+    <preference name="phonegap-version" value="cli-6.5.0" />
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="true" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="InAppBrowserStorageEnabled" value="true" />
     <preference name="LoadUrlTimeoutValue" value="60000" />

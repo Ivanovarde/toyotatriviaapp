@@ -34,7 +34,7 @@ var questionsIndex = 0; 						// Index of the current question during the trivia
 var questionsChangeTime = 3; 					// Time to wait before change to the next question(in seconds)
 var questionsMaxLength = 5; 					// Number of questions for the trivia
 var questionsSelectedQuestions = [];		// Array to stored the selected random questions
-var questionsAnswerMaxTime = 10; 			// Max time to answer a question (in seconds)
+var questionsAnswerMaxTime = 15; 			// Max time to answer a question (in seconds)
 var questionsAnswerTimer = null;				// js timer object
 var questionsSuccessLength = 0;				// Number of successfull answered questions
 var questionsShowIncorrects = false;		// Show or not failed answers
@@ -68,6 +68,10 @@ var questionsIndicatorsHolder = null;
 var questionsIndicators = null;
 var questionsStatusPanel = null;
 
+var dashboard = $('#dashboard');
+var dashboardHeader = null;
+var dashboardFooter = null;
+var dashboardCupHolder = null;
 var dashboardTitle = null;
 var dashboardSubtitle = null;
 
@@ -93,9 +97,9 @@ $(window).on('resize', function () {
 //Using afterresize plugin
 $(window).afterResize( function() {
 
-	console.log('Main > After resize fired');
+	if(debug){console.log('Main > After resize fired');}
 
-	if(debug){window.getScreenInfo();}
+	//if(debug){window.getScreenInfo();}
 
 	updateSite();
 
@@ -104,20 +108,20 @@ $(window).afterResize( function() {
 // Window load
 $(window).bind('load', function(){
 
-	console.log('Main > load: Start');
+	if(debug){console.log('Main > load: Start');}
 
 	$('footer').removeClass('on');
 
 	app.initialize();
 
-	console.log('Main > load: End');
+	if(debug){console.log('Main > load: End');}
 
 });
 
 // jQuery ready
 jQuery(document).ready(function() {
 
-	console.log('Main > documentReady: Start');
+	if(debug){console.log('Main > documentReady: Start');}
 
 	$.support.cors = true;
 	//$.mobile.allowCrossDomainPages = true;
@@ -140,7 +144,7 @@ jQuery(document).ready(function() {
 	setVars();
 	init();
 
-	console.log('Main > documentReady: End');
+	if(debug){console.log('Main > documentReady: End');}
 
 });
 
@@ -159,7 +163,7 @@ $(document).on('click', '.question-option', function(e){ validateQuestion({e: e,
 /*FUNCTIONS*/
 function setVars() {
 
-	console.log('Main > setVars: Start');
+	if(debug){console.log('Main > setVars: Start');}
 
 	ivBody = $('body');
 	ivScrollTop = $(window).scrollTop();
@@ -179,16 +183,19 @@ function setVars() {
 	questionsAnswerTimeHolder = $('.questions-time');
 	dashboardSuccessLength = $('.dashboard-success-length');
 	dashboardQuestionsMaxlength = $('.dashboard-questions-maxlength');
+	dashboardHeader = dashboard.find('.header-inner');
+	dashboardFooter = dashboard.find('.footer-inner');
+	dashboardCupHolder = dashboard.find('.dashboard-cup-holder');
 	dashboardTitle = $('.dashboard-title');
 	dashboardSubtitle = $('.dashboard-subtitle');
 
-	console.log('Main > setVars: End');
+	if(debug){console.log('Main > setVars: End');}
 
 }
 
 function init() {
 
-	console.log('Main > init: Start');
+	if(debug){console.log('Main > init: Start');}
 
 	if(debug){window.getScreenInfo();}
 
@@ -198,7 +205,7 @@ function init() {
 
 	startTrivia();
 
-	console.log('Main > init: End');
+	if(debug){console.log('Main > init: End');}
 
 }
 
@@ -214,7 +221,7 @@ function updateSite(){
 
 function startTrivia(){
 
-	console.log('Main > startTrivia: Start');
+	if(debug){console.log('Main > startTrivia: Start');}
 
 	removePreloader();
 
@@ -224,13 +231,13 @@ function startTrivia(){
 
 	}, 2000);
 
-	console.log('Main > startTrivia: End');
+	if(debug){console.log('Main > startTrivia: End');}
 
 }
 
 function removePreloader(){
 
-	console.log('Main > removePreloader: Start');
+	if(debug){console.log('Main > removePreloader: Start');}
 
 	preloader.removeClass('preloader-off');
 
@@ -240,7 +247,7 @@ function removePreloader(){
 
 		$('html').removeClass('locked');
 
-		console.log('Main > removePreloader: End');
+		if(debug){console.log('Main > removePreloader: End');}
 
 	}, 2000);
 }
@@ -271,6 +278,9 @@ function resetGame(){
 
 	questionsStatusPanel.removeClass('active fail success timeout');
 
+	dashboardHeader.removeClass('show');
+	dashboardFooter.removeClass('show');
+	dashboardCupHolder.removeClass('show');
 	dashboardTitle.html('');
 	dashboardSubtitle.html('');
 
@@ -280,7 +290,7 @@ function resetGame(){
 
 function changeSection(selector){
 
-	console.log('Main > changeSection: Start');
+	if(debug){console.log('Main > changeSection: Start');}
 
 	var newSection = $('section > div' + selector);
 	var newSectionID = newSection.attr('id');
@@ -289,11 +299,11 @@ function changeSection(selector){
 
 	if(!newSection.length)
 	{
-		console.log('There is no section to change to (' + selector + ')');
+		if(debug){console.log('There is no section to change to (' + selector + ')');}
 		return;
 	}
 
-	console.log('currentSectionID: ' + currentSectionID + ' - newSectionID: ' + newSectionID);
+	if(debug){console.log('currentSectionID: ' + currentSectionID + ' - newSectionID: ' + newSectionID);}
 
 	switch(newSectionID)
 	{
@@ -309,7 +319,7 @@ function changeSection(selector){
 		case 'themes':
 
 			//Validate form
-			//Takeing user data and keep it in memory
+			//Takes user data and keep it in memory
 			if(!leadsKeepInMemory())
 			{
 				return false;
@@ -326,7 +336,7 @@ function changeSection(selector){
 					themesHolder.removeClass('shake');
 				}, 500);
 
-				console.log('Main > changeSection: Select 2 themes');
+				if(debug){console.log('Main > changeSection: Select 2 themes');}
 				return;
 			}
 
@@ -346,8 +356,8 @@ function changeSection(selector){
 			aCurrentRecord.topics = themesSelected.join(', ');
 			leadsStoreLocally(aCurrentRecord);
 
-			console.log('Main > aCurrentRecord detail (next line)');
-			//console.log(aCurrentRecord);
+			if(debug){console.log('Main > aCurrentRecord detail (next line)');}
+			//if(debug){console.log(aCurrentRecord);}
 
 		break;
 
@@ -356,13 +366,13 @@ function changeSection(selector){
 	currentSection.removeClass('active');
 	newSection.addClass('active');
 
-	console.log('Main > changeSection: End');
+	if(debug){console.log('Main > changeSection: End');}
 
 }
 
 function selectTheme(data){
 
-	console.log('Main > selectTheme: Start');
+	if(debug){console.log('Main > selectTheme: Start');}
 
 	var e = data.e;
 	var el = data.el;
@@ -372,7 +382,7 @@ function selectTheme(data){
 
 	el.toggleClass('active');
 
-	//console.log(activeThemes.length);
+	//if(debug){console.log(activeThemes.length);}
 
 	themesSelected.length = 0;
 
@@ -389,10 +399,12 @@ function selectTheme(data){
 
 	}
 
-	console.log('themesSelected: ' + themesSelected);
-	console.log('themesSelectedLength: ' + themesSelected.length);
+	if(debug){
+		console.log('themesSelected: ' + themesSelected);
+		console.log('themesSelectedLength: ' + themesSelected.length);
 
-	console.log('Main > selectTheme: End');
+		console.log('Main > selectTheme: End');
+	}
 
 }
 
@@ -407,7 +419,7 @@ function getRandomIntInclusive(min, max) {
 
 function selectQuestions(){
 
-	console.log('Main > selectQuestions: Start');
+	if(debug){console.log('Main > selectQuestions: Start');}
 
 	var selectedQuestions = [];
 	var arrThemeOne = [];
@@ -450,19 +462,21 @@ function selectQuestions(){
 
 	}
 
-	//console.log(currentQuestion);
-	//console.log(selectedQuestions);
-	//console.log(window.mainContent.temas.producto.preguntas);
+	if(debug){
+		//console.log(currentQuestion);
+		//console.log(selectedQuestions);
+		//console.log(window.mainContent.temas.producto.preguntas);
+	}
 
 	questionsSelectedQuestions = selectedQuestions;
 
-	console.log('Main > selectQuestions: End');
+	if(debug){console.log('Main > selectQuestions: End');}
 
 }
 
 function formatQuestions(){
 
-	console.log('Main > formatQuestions: Start');
+	if(debug){console.log('Main > formatQuestions: Start');}
 
 	var questionMarkup = getQuestionMarkup('question');
 	var optionMarkup = getQuestionMarkup('option');
@@ -506,13 +520,13 @@ function formatQuestions(){
 
 	questionsContainers = questionsPanel.find('.questions-container');
 
-	console.log('Main > formatQuestions: End');
+	if(debug){console.log('Main > formatQuestions: End');}
 
 }
 
 function showQuestion(){
 
-	console.log('Main > showQuestion: Start');
+	if(debug){console.log('Main > showQuestion: Start');}
 
 	var currentQuestionContainer = questionsContainers.eq(questionsIndex);
 	var currentQuestionsText = currentQuestionContainer.find('.question-text');
@@ -521,7 +535,7 @@ function showQuestion(){
 	questionsPanel.addClass('loading');
 	questionsStatusPanel.removeClass('fail success timeout');
 
-	console.log('questionsIndex + 1 (' + parseInt(questionsIndex + 1) + ') > questionsMaxLength (' +  questionsMaxLength + ')');
+	if(debug){console.log('questionsIndex + 1 (' + parseInt(questionsIndex + 1) + ') > questionsMaxLength (' +  questionsMaxLength + ')');}
 
 	if(parseInt(questionsIndex + 1) > questionsMaxLength)
 	{
@@ -531,7 +545,7 @@ function showQuestion(){
 
 		changeSection('#dashboard');
 
-		console.log('showQuestion: Go to dashboard');
+		if(debug){console.log('showQuestion: Go to dashboard');}
 		return;
 
 	}
@@ -566,7 +580,7 @@ function showQuestion(){
 
 	}, 1000);
 
-	console.log('Main > showQuestion: End');
+	if(debug){console.log('Main > showQuestion: End');}
 
 }
 
@@ -602,7 +616,7 @@ function getQuestionMarkup(mode){
 
 function startQuestionTimer(){
 
-	console.log('Main > startQuestionTimer: Start');
+	if(debug){console.log('Main > startQuestionTimer: Start');}
 
 	var qTime = questionsAnswerMaxTime;
 
@@ -626,7 +640,7 @@ function startQuestionTimer(){
 			if(qTime < 1)
 			{
 
-				console.log('questionsAnswerTimer: ' + questionsAnswerTimer);
+				if(debug){console.log('questionsAnswerTimer: ' + questionsAnswerTimer);}
 
 				validateQuestion();
 
@@ -638,10 +652,10 @@ function startQuestionTimer(){
 
 	}else
 	{
-		console.log('Main > startQuestionTimer: Timer mode: ' + questionsTimeMode);
+		if(debug){console.log('Main > startQuestionTimer: Timer mode: ' + questionsTimeMode);}
 	}
 
-	console.log('Main > startQuestionTimer: End');
+	if(debug){console.log('Main > startQuestionTimer: End');}
 
 }
 
@@ -664,7 +678,7 @@ function validateQuestion(data){
 
 	e.preventDefault();
 
-	//console.log(currentQuestions);
+	//if(debug){console.log(currentQuestions);}
 
 	// If we are playing in timing mode, stop the clock
 	if(questionsTimeMode)
@@ -677,7 +691,7 @@ function validateQuestion(data){
 	if(elValue == 'success')
 	{
 
-		console.log('correcto!!');
+		if(debug){console.log('correcto!!');}
 		el.addClass(elValue);
 		questionsSuccessLength++;
 
@@ -685,7 +699,7 @@ function validateQuestion(data){
 	else
 	{
 
-		console.log('incorrecto!!');
+		if(debug){console.log('incorrecto!!');}
 		el.addClass('selected');
 
 	}
@@ -713,9 +727,11 @@ function validateQuestion(data){
 	questionsStatusPanel.addClass(elValue);
 	questionsIndicators.eq(questionsIndex).removeClass('active').addClass(elValue);
 
-	//console.log('questionsIndex: ' + questionsIndex);
-	//console.log('questionsIndicators.eq(questionsIndex)');
-	//console.log(questionsIndicators.eq(questionsIndex));
+	if(debug){
+		//console.log('questionsIndex: ' + questionsIndex);
+		//console.log('questionsIndicators.eq(questionsIndex)');
+		//console.log(questionsIndicators.eq(questionsIndex));
+	}
 
 	questionsIndex++;
 
@@ -730,13 +746,13 @@ function validateQuestion(data){
 
 function getTriviaScore(){
 
-	console.log('Main > getTriviaScore: Start');
+	if(debug){console.log('Main > getTriviaScore: Start');}
 
 	//var third = Math.ceil(questionsMaxLength / 100 * 33.33);
 	//var half = Math.ceil(questionsMaxLength / 100 * 50);
 	var successPercent = questionsSuccessLength / questionsMaxLength * 100;
 
-	console.log('Main > getTriviaScore: successPercent: ' + successPercent);
+	if(debug){console.log('Main > getTriviaScore: successPercent: ' + successPercent);}
 
 	if(successPercent < 35)
 	{
@@ -759,17 +775,35 @@ function getTriviaScore(){
 		dashboardSubtitle.html(dashboardSubtitleMax);
 	}
 
-	console.log('Main > getTriviaScore: End');
+	window.setTimeout(function(){
+
+		dashboardCupHolder.addClass('show');
+
+		window.setTimeout(function(){
+
+			dashboardHeader.addClass('show');
+
+			window.setTimeout(function(){
+
+				dashboardFooter.addClass('show');
+
+			}, 500);
+
+		}, 350);
+
+	}, 350);
+
+	if(debug){console.log('Main > getTriviaScore: End');}
 
 }
 
 function ajaxReadyCheck(request) {
 	var r = true;
 
-	console.log('ajaxReadyCHeck -> loadingData value: ' + loadingData + ' (about to call ' + request + ')');
+	if(debug){console.log('ajaxReadyCHeck -> loadingData value: ' + loadingData + ' (about to call ' + request + ')');}
 
 	if (loadingData) {
-		console.log('Can\'t perform the action ' + request + '. The erver is busy loading data' + (currentAjaxProcess ? ' for: ' + currentAjaxProcess : '.'));
+		if(debug){console.log('Can\'t perform the action ' + request + '. The erver is busy loading data' + (currentAjaxProcess ? ' for: ' + currentAjaxProcess : '.'));}
 		r = false;
 	}
 	currentAjaxProcess = request;
@@ -778,7 +812,7 @@ function ajaxReadyCheck(request) {
 
 function preSubmitForm(data){
 
-	console.log('Main > preSubmitForm: Start');
+	if(debug){console.log('Main > preSubmitForm: Start');}
 
 	var e = data.e;
 	var form = data.el;
@@ -807,7 +841,7 @@ function preSubmitForm(data){
 
 	window.submitForm( {'e': e, 'el': form} );
 
-	console.log('Main > preSubmitForm: End');
+	if(debug){console.log('Main > preSubmitForm: End');}
 
 }
 
@@ -818,7 +852,7 @@ function showCpanelStatus(data) {
 	var status = $('#modal-status').removeAttr('class').text('');
 
 	if (!msg) {
-		console.log('showCpanelStatus -> No hay mensaje para mostrar en status');
+		if(debug){console.log('showCpanelStatus -> No hay mensaje para mostrar en status');}
 		return;
 	}
 
@@ -862,7 +896,7 @@ function showConfirm(data) {
 
 function showAlert(data) {
 
-	//console.log(data);
+	//if(debug){console.log(data);}
 
 	var el = data.el || $('#page-alert');
 	var alertMode = data.mode || 'alert';

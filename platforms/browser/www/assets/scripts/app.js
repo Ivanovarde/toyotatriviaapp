@@ -91,9 +91,9 @@ var app = {
 		//Hay una api interesate tambien en:
 		//https://googlechrome.github.io/samples/network-information/
 
-		console.log('App > checkConnection: start');
+		if(debug){console.log('App > checkConnection: start');}
 
-		console.log(navigator);
+		if(debug){console.log(navigator);}
 
 		if(app.connectionTimer !== null)
 		{
@@ -130,17 +130,21 @@ var app = {
 						app.isConnected = false;
 					}else{
 						app.isConnected = true;
-						console.log('App > checkConnection: detected from Cordova plugin');
+
+						if(debug){console.log('App > checkConnection: detected from Cordova plugin');}
 					}
 
-					console.log('App > checkConnection: ' + states[networkState]);
+					if(debug){console.log('App > checkConnection: ' + states[networkState]);}
 
 				}
 				catch(err) {
 
 					app.isConnected = false;
-					//console.log('App > checkConnection: ' + err);
-					console.log('App > checkConnection: ' + err.message + '. - isConnected: ' + app.isConnected);
+
+					if(debug){
+						//console.log('App > checkConnection: ' + err);
+						console.log('App > checkConnection: ' + err.message + '. - isConnected: ' + app.isConnected);
+					}
 
 				}
 
@@ -149,7 +153,7 @@ var app = {
 			{
 
 				app.isConnected = navigator.onLine;
-				console.log('App > checkConnection: detected from Navigator Online');
+				if(debug){console.log('App > checkConnection: detected from Navigator Online');}
 
 			} else
 			{
@@ -158,7 +162,7 @@ var app = {
 				var i = new Image();
 
 				i.onerror = function () {
-					console.log('checkConnection: Offline');
+					if(debug){console.log('checkConnection: Offline');}
 
 					app.showConnectionStatus();
 					app.isConnected = false;
@@ -171,7 +175,7 @@ var app = {
 					app.showConnectionStatus();
 					app.isConnected = true;
 
-					console.log('App > checkConnection: detected from Google Image ping');
+					if(debug){console.log('App > checkConnection: detected from Google Image ping');}
 
 					//return app.isConnected;
 				};
@@ -185,8 +189,10 @@ var app = {
 
 		app.connectionTimer = window.setTimeout(app.checkConnection, parseInt(connectionStatusInterval * 1000) ); //10 seg
 
-		console.log('App > checkConnection: isConnected = ' + app.isConnected);
-		console.log('App > checkConnection: End');
+		if(debug){
+			console.log('App > checkConnection: isConnected = ' + app.isConnected);
+			console.log('App > checkConnection: End');
+		}
 
 		return app.isConnected;
 
@@ -194,7 +200,7 @@ var app = {
 
 	showConnectionStatus: function(){
 
-		console.log('App > showConnectionStatus: Start');
+		if(debug){console.log('App > showConnectionStatus: Start');}
 
 		var netstatus = $('.net-status');
 
@@ -206,7 +212,7 @@ var app = {
 			netstatus.removeClass('online');
 		}
 
-		console.log('App > showConnectionStatus: End');
+		if(debug){console.log('App > showConnectionStatus: End');}
 
 	}
 

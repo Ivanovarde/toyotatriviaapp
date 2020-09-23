@@ -336,7 +336,7 @@ function changeSection(selector){
 					themesHolder.removeClass('shake');
 				}, 500);
 
-				if(debug){console.log('Main > changeSection: Select 2 themes');|
+				if(debug){console.log('Main > changeSection: Select 2 themes');}
 				return;
 			}
 

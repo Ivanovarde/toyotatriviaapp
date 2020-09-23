@@ -28,6 +28,7 @@
 	--regular-radius: 6px;
 
 	--regular-text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.5);
+	--regular-text-shadow-gray: 0px 3px 0px rgba(0, 0, 0, 0.3);
 	--regular-text-shadow-white: 0px 3px 0px rgba(255, 255, 255, 0.75);
 	--modal-shadow: 0 5px 15px rgba(0,0,0,.5);
 
@@ -764,8 +765,11 @@ a.theme-box {
 			  box-shadow: 0 6px 0 0px rgba(var(--black), 1);
 	border-radius: var(--regular-radius);
 }
-a.theme-box:hover,
-a.theme-box.active {
+a.theme-box:hover{
+	background: rgba(var(--white), .5) !important;
+	text-shadow: var(--regular-text-shadow-gray) !important;
+}
+a.theme-box.active,  a.theme-box.active:hover {
 	background: rgba(var(--white), .8) !important;
 	text-shadow: var(--regular-text-shadow-white) !important;
 }
@@ -784,11 +788,7 @@ a.theme-box.active {
 	transition: var(--regular-transition);
 }
 .theme-box:hover::before {
-	 opacity: 0;
-	/*
-	height: calc(100% - 12px);
-	background-color: rgba(var(--white), .7);
-	*/
+	 /*opacity: 0;*/
 }
 a.theme-box span {
 	display: inline-block;
@@ -838,6 +838,8 @@ a.theme-box[data-bg="pink"]:hover,
 a.theme-box[data-bg="pink"].active{
 	color: rgba(var(--pink), 1);
 }
+
+
 
 
 .questions{}
@@ -1209,6 +1211,16 @@ a.theme-box[data-bg="pink"].active{
 #dashboard .dashboard-cup-holder {
 	text-align: center;
 	position: relative;
+	opacity: 0;
+	-webkit-transition: var(--bounce-transition);
+	transition: var(--bounce-transition);
+	-webkit-transform: scale(.4);
+			  transform: scale(.4);
+}
+#dashboard .dashboard-cup-holder.show {
+	-webkit-transform: scale(1);
+			  transform: scale(1);
+	opacity: 1;
 }
 #dashboard .dashboard-numbers {
 	font-size: var(--h1x3);
@@ -1234,6 +1246,14 @@ a.theme-box[data-bg="pink"].active{
 }
 #dashboard .dashboard-logo-holder img{
 	max-width: 14rem;
+}
+#dashboard .header-inner, #dashboard .footer-inner {
+	opacity: 0;
+	-webkit-transition: var(--regular-transition);
+	transition: var(--regular-transition);
+}
+#dashboard .header-inner.show, #dashboard .footer-inner.show {
+	opacity: 1;
 }
 
 
@@ -1641,10 +1661,11 @@ form {
 textarea.form-control {
 	resize: none;
 }
-input.has-error, textarea.has-error {
-	border: 1px solid red;
-	color: red;
-	background: rgba(var(--red-light), 1);
+
+.form-group.has-error input,
+.form-group.has-error textarea {
+	border-color: rgba(var(--red),1) !important;
+	background-color: rgba(var(--red),.05);
 }
 
 

@@ -5,7 +5,7 @@ var mainContent = {
 			"color": "green",
 			"preguntas": [
 				{
-					"pregunta": "¿Cuándo inicia TOYOTA la producción en Argentina? ",
+					"pregunta": "¿Cuándo inicia TOYOTA la producción en Argentina?",
 					"respuestas": [
 						"1994",
 						"1997",
@@ -14,7 +14,7 @@ var mainContent = {
 					"correcta": 1
 				},
 				{
-					"pregunta": "El primer isologo de Toyota tuvo su origen en:",
+					"pregunta": "El primer isologo de TOYOTA tuvo su origen en:",
 					"respuestas": [
 						"Un concurso de empleados de la compañía",
 						"Una agencia de diseño",
@@ -41,7 +41,7 @@ var mainContent = {
 					"correcta": 0
 				},
 				{
-					"pregunta": "¿Cuánto se invirtió en la primera expansión de Planta en el 2002?",
+					"pregunta": "¿Cuánto se invirtió en la primera expansión de planta en el 2002?",
 					"respuestas": [
 						"100 millones de USD",
 						"500 millones de USD",
@@ -52,7 +52,7 @@ var mainContent = {
 				{
 					"pregunta": "¿Qué plantas satélites se abrieron entre 2006 y 2007?",
 					"respuestas": [
-						"Motores, Pintura de Partes Plásticas, Prensa",
+						"Motores, Pintura de partes plásticas, Prensa",
 						"Prensa y Motores",
 						"Ejes traseros, Motores y Chasis"
 					],
@@ -61,14 +61,14 @@ var mainContent = {
 				{
 					"pregunta": "¿Cuánto se incrementó el volumen de producción desde 2015?",
 					"respuestas": [
-						"97000 unidades",
-						"140000 unidades",
-						"200000 unidades"
+						"97.000 unidades",
+						"140.000 unidades",
+						"200.000 unidades"
 					],
 					"correcta": 1
 				},
 				{
-					"pregunta": "¿Cuánto se invirtió para llevar adelante la segunda expansión de la Planta?",
+					"pregunta": "¿Cuánto se invirtió para llevar adelante la segunda expansión de la planta?",
 					"respuestas": [
 						"200 millones de USD",
 						"504 millones de USD",
@@ -77,7 +77,7 @@ var mainContent = {
 					"correcta": 2
 				},
 				{
-					"pregunta": "¿En qué año se inauguró la planta de Chasis?",
+					"pregunta": "¿En qué año se inauguró la Planta de Chasis?",
 					"respuestas": [
 						"2014",
 						"2015",
@@ -115,9 +115,9 @@ var mainContent = {
 				{
 					"pregunta": "¿Cuál es el peso de la Hilux Explotada?",
 					"respuestas": [
-						"1000 kg",
-						"2500 kg",
-						"1800 kg"
+						"1.000 kg",
+						"2.500 kg",
+						"1.800 kg"
 					],
 					"correcta": 2
 				},
@@ -155,11 +155,11 @@ var mainContent = {
 					"correcta": 0
 				},
 				{
-					"pregunta": "¿Qué significa la palabra japonesa “KAIZEN”?",
+					"pregunta": "¿Qué significa la palabra japonesa KAIZEN?",
 					"respuestas": [
 						"Respeto hacia las diferentes culturas",
 						"Estandarización de procesos",
-						"Mejora Continua"
+						"Mejora continua"
 					],
 					"correcta": 2
 				},
@@ -168,7 +168,7 @@ var mainContent = {
 					"respuestas": [
 						"Respeto por la gente y Kaizen",
 						"Genchi-genbutsu y Kaizen",
-						"Trabajo en equipo e Innovación",
+						"Trabajo en equipo e innovación",
 						"Ninguna de las opciones"
 					],
 					"correcta": 0
@@ -197,7 +197,7 @@ var mainContent = {
 					"respuestas": [
 						"Automatización inteligente",
 						"Visualización de fallas",
-						"Detección de fallas "
+						"Detección de fallas"
 					],
 					"correcta": 0
 				},
@@ -206,7 +206,7 @@ var mainContent = {
 					"respuestas": [
 						"Trabajo en equipo",
 						"Disciplina en el trabajo",
-						"Ir y mirar en el lugar de los hechos "
+						"Ir y mirar en el lugar de los hechos"
 					],
 					"correcta": 2
 				},
@@ -215,7 +215,7 @@ var mainContent = {
 					"respuestas": [
 						"Clasificar, ordenar, limpiar, preservar, disciplina",
 						"Ordenar, limpiar, preservar, disciplina, desechar",
-						"Limpiar, Ordenar, Cuidar, desechar, disciplina"
+						"Limpiar, ordenar, cuidar, desechar, disciplina"
 					],
 					"correcta": 0
 				},
@@ -229,7 +229,7 @@ var mainContent = {
 					"correcta": 2
 				},
 				{
-					"pregunta": "¿Qué significa sistema de sugerencia? ",
+					"pregunta": "¿Qué significa sistema de sugerencia?",
 					"respuestas": [
 						"Empleados proponen mejoras en equipo",
 						"Empleados proponen mejoras individualmente",
@@ -256,7 +256,7 @@ var mainContent = {
 					"correcta": 1
 				},
 				{
-					"pregunta": "¿Por qué es importante la modalidad “JUST IN TIME o JUSTO A TIEMPO” en el proceso productivo? ",
+					"pregunta": "¿Por qué es importante la modalidad JUST IN TIME o JUSTO A TIEMPO en el proceso productivo?",
 					"respuestas": [
 						"Para reducir el stock de partes en planta y producir lo necesario",
 						"Para eliminar las áreas de almacenamiento en la planta",
@@ -265,11 +265,11 @@ var mainContent = {
 					"correcta": 0
 				},
 				{
-					"pregunta": "¿Cuál es el objetivo final del Sistema de Producción TOYOTA? ",
+					"pregunta": "¿Cuál es el objetivo final del Sistema de Producción TOYOTA?",
 					"respuestas": [
 						"Aumentar la velocidad de la línea",
 						"Lograr la satisfacción del cliente",
-						"Abrir nuevas Plantas en el mundo"
+						"Abrir nuevas plantas en el mundo"
 					],
 					"correcta": 1
 				},
@@ -282,11 +282,11 @@ var mainContent = {
 					"correcta": 0
 				},
 				{
-					"pregunta": "Si encuentro una falla en el proceso ¿Qué se debe hacer? ",
+					"pregunta": "Si encuentro una falla en el proceso ¿Qué se debe hacer?",
 					"respuestas": [
 						"Dejo que el sector correspondiente la solucione",
 						"Aviso a mi supervisor y trato de solucionarla",
-						"Sólo doy aviso a mi supervisor"
+						"Solo doy aviso a mi supervisor"
 					],
 					"correcta": 1
 				}
@@ -308,7 +308,7 @@ var mainContent = {
 				{
 					"pregunta": "¿Cuál es el objetivo de TOYOTA KINTO?",
 					"respuestas": [
-						"Brindar facilidades de movilidad ",
+						"Brindar facilidades de movilidad",
 						"Alquilar vehículos Toyota",
 						"Aumentar el volumen de venta"
 					],
@@ -324,10 +324,10 @@ var mainContent = {
 					"correcta": 0
 				},
 				{
-					"pregunta": "¿Cuáles son las etapas del proceso de pintura? ",
+					"pregunta": "¿Cuáles son las etapas del proceso de pintura?",
 					"respuestas": [
-						"ED, aplicación de sellador",
-						"Base , Pintado final",
+						"ED, Aplicación de sellador",
+						"Base, Pintado final",
 						"A y B"
 					],
 					"correcta": 2
@@ -357,13 +357,13 @@ var mainContent = {
 						"Actúa como anticorrosivo",
 						"Ninguna de las anteriores"
 					],
-					"correcta": 0
+					"correcta": 1
 				},
 				{
 					"pregunta": "¿Qué tipo de motores se ensamblan en TOYOTA Argentina?",
 					"respuestas": [
 						"Nafteros",
-						"Diesel",
+						"Diésel",
 						"Híbridos",
 						"A y B son correctas"
 					],
@@ -397,10 +397,10 @@ var mainContent = {
 					"correcta": 2
 				},
 				{
-					"pregunta": "¿Cuáles son los tipos del sistema hibrido?",
+					"pregunta": "¿Cuáles son los tipos del sistema híbrido?",
 					"respuestas": [
-						"En Serie",
-						"En Paralelo",
+						"En serie",
+						"En paralelo",
 						"Combinado o mixto",
 						"Todas son correctas"
 					],
@@ -427,7 +427,7 @@ var mainContent = {
 					"correcta": 3
 				},
 				{
-					"pregunta": "¿Qué es un vehículo Híbrido?",
+					"pregunta": "¿Qué es un vehículo híbrido?",
 					"respuestas": [
 						"Un vehículo que utiliza hidrógeno",
 						"Un vehículo que utiliza dos fuentes motrices combustión y eléctrica",
@@ -442,7 +442,7 @@ var mainContent = {
 			"color": "blue",
 			"preguntas": [
 				{
-					"pregunta": "¿Con qué nombre denominan a los equipos de competición oficial de TOYOTA en todo el mundo? ",
+					"pregunta": "¿Con qué nombre denominan a los equipos de competición oficial de TOYOTA en todo el mundo?",
 					"respuestas": [
 						"Toyota Motorsport",
 						"Toyota Gazoo Racing",
@@ -452,7 +452,7 @@ var mainContent = {
 					"correcta": 1
 				},
 				{
-					"pregunta": "¿Cuántos títulos obtuvo Matías Rossi con Toyota? ",
+					"pregunta": "¿Cuántos títulos obtuvo Matías Rossi con Toyota?",
 					"respuestas": [
 						"3",
 						"4",
@@ -461,7 +461,7 @@ var mainContent = {
 					"correcta": 0
 				},
 				{
-					"pregunta": "¿En qué categorías del automovilismo Nacional participa Toyota Gazoo Racing?",
+					"pregunta": "¿En qué categorías del automovilismo nacional participa Toyota Gazoo Racing?",
 					"respuestas": [
 						"TC2000 y Turismo Pista",
 						"Super TC2000 y Top Race",
@@ -472,8 +472,8 @@ var mainContent = {
 				{
 					"pregunta": "¿Quién fue el piloto campeón de TOYOTA en 2013?",
 					"respuestas": [
-						"Julian Santero",
-						"Matias Rossi",
+						"Julián Santero",
+						"Matías Rossi",
 						"Mariano Werner"
 					],
 					"correcta": 1
@@ -488,7 +488,7 @@ var mainContent = {
 					"correcta": 1
 				},
 				{
-					"pregunta": "Toyota Gazoo Racing participa en el Mundial de Resistencia (WEC) ",
+					"pregunta": "Toyota Gazoo Racing participa en el Mundial de Resistencia (WEC)",
 					"respuestas": [
 						"Verdadero",
 						"Falso"
@@ -496,7 +496,7 @@ var mainContent = {
 					"correcta": 0
 				},
 				{
-					"pregunta": "Toyota obtuvo dos triunfos consecutivos en las 24horas de Le Mans",
+					"pregunta": "Toyota obtuvo dos triunfos consecutivos en las 24 horas de Le Mans",
 					"respuestas": [
 						"Verdadero",
 						"Falso"
@@ -506,8 +506,8 @@ var mainContent = {
 				{
 					"pregunta": "¿Qué piloto argentino se sumó al equipo Toyota Gazoo Racing en la WEC?",
 					"respuestas": [
-						"Matias Rossi",
-						"Pechito Lopez",
+						"Matías Rossi",
+						"Pechito López",
 						"Facundo Ardusso"
 					],
 					"correcta": 1
@@ -523,7 +523,7 @@ var mainContent = {
 					"correcta": 3
 				},
 				{
-					"pregunta": "¿Qué modelo de TOYOTA corre el Top Race como equipo Oficial Gazoo Racing?",
+					"pregunta": "¿Qué modelo de TOYOTA corre el Top Race como equipo oficial Gazoo Racing?",
 					"respuestas": [
 						"Camry",
 						"Corolla",
@@ -532,7 +532,7 @@ var mainContent = {
 					"correcta": 0
 				},
 				{
-					"pregunta": "¿Qué modelo de TOYOTA corre el Rally como equipo Oficial Toyota Gazoo Racing?",
+					"pregunta": "¿Qué modelo de TOYOTA corre el Rally como equipo oficial Toyota Gazoo Racing?",
 					"respuestas": [
 						"Etios",
 						"Corolla",
@@ -542,7 +542,7 @@ var mainContent = {
 					"correcta": 3
 				},
 				{
-					"pregunta": "¿En qué año ingresó el equipo Oficial Toyota al TC2000 (hoy SúperTC2000)?",
+					"pregunta": "¿En qué año ingresó el equipo oficial Toyota al TC2000 (hoy SúperTC2000)?",
 					"respuestas": [
 						"1997",
 						"2000",
@@ -569,18 +569,18 @@ var mainContent = {
 				{
 					"pregunta": "¿Cuáles son los ejes que guían los programas de RSE en Toyota?",
 					"respuestas": [
-						"Seguridad Vial, Medioambiente y Educación para la Empleabilidad",
-						"Educación Ambiental, Voluntariado y Salud publica",
-						"Seguridad Industrial, Medioambiente y Educación para la Empleabilidad"
+						"Seguridad vial, Medioambiente y Educación para la empleabilidad",
+						"Educación ambiental, Voluntariado y Salud pública",
+						"Seguridad industrial, Medioambiente y Educación para la empleabilidad"
 					],
 					"correcta": 0
 				},
 				{
 					"pregunta": "¿En qué consiste el programa Toyota y Vos?",
 					"respuestas": [
-						"Educación y concientización ambiental para niños de escuelas públicas de la Comunidad",
+						"Educación y concientización ambiental para niños de escuelas públicas de la comunidad",
 						"Educación y concientización vial solo para empleados sobre cuidados de la salud",
-						"Educación y concientización vial para niños y adultos de la Comunidad"
+						"Educación y concientización vial para niños y adultos de la comunidad"
 					],
 					"correcta": 2
 				},
@@ -598,7 +598,7 @@ var mainContent = {
 					"respuestas": [
 						"Ninguno",
 						"Dos",
-						"Cuatro."
+						"Cuatro"
 					],
 					"correcta": 2
 				},
@@ -622,7 +622,7 @@ var mainContent = {
 					"correcta": 3
 				},
 				{
-					"pregunta": "¿Desde qué año se desarrolla el programa de Conciencia Ambiental?",
+					"pregunta": "¿Desde qué año se desarrolla el programa de Conciencia ambiental?",
 					"respuestas": [
 						"2011",
 						"2017",
@@ -723,7 +723,7 @@ var mainContent = {
 					"correcta": 1
 				},
 				{
-					"pregunta": "¿Cuántos paneles solares hay instalados en la planta de Toyota en Zarate?",
+					"pregunta": "¿Cuántos paneles solares hay instalados en la planta de Toyota en Zárate?",
 					"respuestas": [
 						"150 paneles",
 						"360 paneles",
@@ -738,11 +738,11 @@ var mainContent = {
 			"color": "pink",
 			"preguntas": [
 				{
-					"pregunta": "¿Cuál fue el primer modelo Hibrido lanzado en 2010?",
+					"pregunta": "¿Cuál fue el primer modelo híbrido lanzado en 2010?",
 					"respuestas": [
 						"Prius",
 						"Rav 4",
-						"Corolla Hibrido",
+						"Corolla híbrido",
 						"Ninguna de las anteriores"
 					],
 					"correcta": 0
@@ -811,7 +811,7 @@ var mainContent = {
 					"correcta": 1
 				},
 				{
-					"pregunta": "¿Qué modelos de vehículos produce TOYOTA Brasil? ",
+					"pregunta": "¿Qué modelos de vehículos produce TOYOTA Brasil?",
 					"respuestas": [
 						"Yaris y Corolla",
 						"Hilux y SUV (SW4 y Fortuner)",
@@ -829,7 +829,7 @@ var mainContent = {
 					"correcta": 2
 				},
 				{
-					"pregunta": "¿Cuáles de los siguientes vehículos tiene una versión Gazoo Racing? ",
+					"pregunta": "¿Cuáles de los siguientes vehículos tiene una versión Gazoo Racing?",
 					"respuestas": [
 						"Camry",
 						"RAV4",
@@ -849,7 +849,7 @@ var mainContent = {
 				{
 					"pregunta": "La SW4 cuenta con los modos de conducción ECO y POWER.",
 					"respuestas": [
-						"Verdadero ",
+						"Verdadero",
 						"Falso"
 					],
 					"correcta": 0

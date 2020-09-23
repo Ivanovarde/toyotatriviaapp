@@ -1,9 +1,8 @@
-
 function validator(data){
 
 	var debug = data.debug || false;
 	var btn = data.el;
-	var f = (data.form == null) ? btn.parents("form") : data.form;
+	var f = (data.form === null) ? btn.parents("form") : data.form;
 	var callback = (data.callback !== undefined) ? data.callback : '';
 	var showErrorFunction = (data.showErrorFunction !== undefined) ? data.showErrorFunction : '';
 	var showErrorMode = (data.showErrorMode !== undefined) ? data.showErrorMode : 'normal';
@@ -24,7 +23,7 @@ function validator(data){
 	var er_numeric = /^\d+$/;
 	var nl = '<br>';
 	var send = true;
-	var errors = new Array();
+	var errors = [];
 	var messages = '';
 	var validationRegEx = new RegExp("validate\:(\{.*\})", "i");
 	//var aValidations = new Array('required','email', 'match', 'minlength', 'maxlength');
@@ -49,14 +48,14 @@ function validator(data){
 		//var isEmail = (data.email !== undefined && data.email) ? true : false;
 
 		var data = getFieldRules($thisField);
-		var isRequired = ($thisField.hasClass('required') || (data.required !== undefined && data.required == true)) ? true : false;
-		var isEmail = ($thisField.hasClass('email') || (data.email !== undefined && data.email == true)) ? true : false;
-		var isNumeric = ($thisField.hasClass('numeric') || (data.numeric !== undefined && data.numeric == true)) ? true : false;
+		var isRequired = ($thisField.hasClass('required') || (data.required !== undefined && data.required === true)) ? true : false;
+		var isEmail = ($thisField.hasClass('email') || (data.email !== undefined && data.email === true)) ? true : false;
+		var isNumeric = ($thisField.hasClass('numeric') || (data.numeric !== undefined && data.numeric === true)) ? true : false;
 		var minlength = (data.minlength !== undefined) ? data.minlength : false;
 		var maxlength = (data.maxlength !== undefined) ? data.maxlength : false;
 		var match = (data.match !== undefined && data.match !== false) ? data.match : '';
 		var fieldName = (data.fieldname !== undefined && data.fieldname !== false) ? data.fieldname : $thisField.attr('id');
-		var error = new Array();
+		var error = [];
 		var m = '';
 		var addField = false;
 
@@ -94,7 +93,9 @@ function validator(data){
 				case 'text':
 				case 'password':
 				case 'textarea':
-					if( (isRequired && ( (pHolder == $thisField.val()) || (isRequired && $thisField.val() == '') )) || (isRequired && (type == 'textarea') && $thisField.val() == '' ) ){
+				case 'email':
+				case 'number':
+					if( (isRequired && ( (pHolder == $thisField.val()) || (isRequired && $thisField.val() === '') )) || (isRequired && (type == 'textarea') && $thisField.val() === '' ) ){
 						m = msgRequired.replace('{fieldName}', fieldName) + nl;
 						addField = true;
 					}
