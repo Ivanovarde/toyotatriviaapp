@@ -668,6 +668,9 @@ DEBUG ONLY
 	height: 1024px;
 	width: var(--app-max-width);
 	margin: 0 auto;
+
+	height: 100vh;
+	width: 100%;
 }
 
 section{
@@ -677,8 +680,9 @@ section{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
-	/*background-size: cover;*/
 	position: relative;
+
+	background-size: cover;
 }
 
 section > div:not(.answer-status) {
@@ -1180,6 +1184,9 @@ a.theme-box[data-bg="pink"].active{
 
 #dashboard {
 	background: url(../images/bg-trivia-dashboard.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 #dashboard .row-header {
 	padding: 8rem 0 3rem;
