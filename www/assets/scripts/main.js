@@ -128,7 +128,7 @@ jQuery(document).ready(function() {
 
 	//setIconButtonSize();
 
-	$.ajaxSetup({timeout: 30000});
+	$.ajaxSetup({timeout: 300000});
 	$(document).ajaxStart(function(){ $("#ajax-status").show(); });
 	$(document).ajaxStop(function(){  $("#ajax-status").hide(); });
 	$(document).ajaxError(function(e, jqxhr, settings, exception) {

@@ -1,6 +1,9 @@
 var newLeadNotificationTimer;
 var newLeadNotificationTime = 3; // (in seconds)
 var msgNoStoredRecords = 'En este momento no hay contactos almacenados';
+var msgAjaxError = 'Ha ocurrido un error. Por favor intentar en unos minutos.';
+var msgAjaxTimeoutError = 'Se ha agotado el tiempo de espera para esta acción. Intentar nuevamente en unos minutos';
+
 var aCurrentRecord = {};
 
 
@@ -16,7 +19,8 @@ $(document).on('click', '#change-server-url', function (e) {
 
 	//console.log(settings_server_url + ' == ' + current_server_url);
 
-	if (settings_server_url !== '' && settings_server_url !== undefined) {
+	if (settings_server_url !== '' && settings_server_url !== undefined)
+	{
 
 		if (settings_server_url == current_server_url)
 		{
@@ -24,7 +28,8 @@ $(document).on('click', '#change-server-url', function (e) {
 			msg = 'Se ingresó la URL actual';
 			statusClass = 'bg-warning';
 
-		}else if(!urlCheck(settings_server_url))
+		}
+		else if(!urlCheck(settings_server_url))
 		{
 
 			msg = 'Ingresar una URL válida';
@@ -491,7 +496,8 @@ function recordsStartSync(data) {
 			recordsStartSync({"e": e,"el": $(this)});
 		});
 
-	} else
+	}
+	else
 	{
 
 		el.off().one('click', function (e)
@@ -538,7 +544,7 @@ function recordsSendToRemoteServer(btn) {
 	//Levanto todos los registros guardados y los mando via post al server
 	var stored_leads = JSON.parse(window.localStorage.getItem("stored_leads"));
 
-	console.log('Leads > recordsStartSync: stred_leads detail (next line)');
+	console.log('Leads > recordsStartSync: stred_leads detail (uncomment next line)');
 	//console.log(stored_leads);
 
 	if (!ajaxReadyCheck('recordsSendToRemoteServer'))
@@ -552,90 +558,113 @@ function recordsSendToRemoteServer(btn) {
 
 	console.log('Leads > recordsStartSync: stred_leads -> URL: ' + remote_server_url);
 
-	$.ajax({
-		url: remote_server_url + '/system/php/actions.php?action=store&time=' + currentDate.ivTimeStamp(),
-		async: false,
-		type: 'POST',
-		data: {
-			'stored_leads': stored_leads
-		},
-		dataType: 'json',
-		charset: 'UTF-8',
-		timeout: 10000
-	})
-	.done(function (response, status, xhr) {
+	window.setTimeout(function(){
 
-		loadingData = false;
+		$.ajax({
+			url: remote_server_url + '/system/php/actions.php?action=store&time=' + currentDate.ivTimeStamp(),
+			async: false,
+			type: 'POST',
+			data: {
+				'stored_leads': stored_leads
+			},
+			dataType: 'json',
+			charset: 'UTF-8',
+			timeout: 10000
+		})
+		.done(function (response, status, xhr) {
 
-		var responseClass = 'danger';
+			loadingData = false;
 
-		// Si NO HUBO respuesta del servidor
-		if (response === null || response === undefined) {
-			console.log(status);
-		}
+			var responseClass = 'danger';
 
-		// si HAY respuesta del servidor
-		if (response !== null && response !== '') {
-
-			// Si NO HUBO error
-			if (response.status) {
-
-				responseClass = 'success';
-
-				// Vacio los registros locales
-				window.localStorage.removeItem("stored_leads");
-
-			} // Si HUBO error y vienen registros devueltos
-			else if (!response.status && response.failed_records.length) {
-
-				// Vacio los registros locales
-				window.localStorage.removeItem("stored_leads");
-
-				// Guardo los registros devueltos
-				window.localStorage.setItem("stored_leads", JSON.stringify(response.failed_records));
+			// Si NO HUBO respuesta del servidor
+			if (response === null || response === undefined) {
+				console.log('No hubo respuesta del server');
+				console.log(status);
 			}
 
-			// Actualizo el contador
-			leadsUpdateStoredCounter();
+			// si HAY respuesta del servidor
+			if (response !== null && response !== '') {
+
+				// Si NO HUBO error
+				if (response.status) {
+
+					responseClass = 'success';
+
+					// Vacio los registros locales
+					window.localStorage.removeItem("stored_leads");
+
+				} // Si HUBO error y vienen registros devueltos
+				else if (!response.status && response.failed_records.length) {
+
+					// Vacio los registros locales
+					window.localStorage.removeItem("stored_leads");
+
+					// Guardo los registros devueltos
+					window.localStorage.setItem("stored_leads", JSON.stringify(response.failed_records));
+				}
+
+				// Actualizo el contador
+				leadsUpdateStoredCounter();
+
+				window.setTimeout(function () {
+					showAlert({
+						body: response.msg,
+						class: responseClass,
+						//icon: 'check',
+						action: 'show'
+					});
+					console.log(response.msg);
+				}, 1000);
+
+			}
+
+		})
+		.fail(function (jqXHR, status, errorThrown) {
+
+			console.log('recordsSendToRemoteServer: Fail: ');
+			console.log(jqXHR);
+			console.log(status);
+			console.log(errorThrown);
+
+			var errorMessage = msgAjaxError;
+
+			if(status === "timeout") {
+				errorMessage = msgAjaxTimeoutError;
+			}
 
 			window.setTimeout(function () {
 				showAlert({
-					body: response.msg,
-					class: responseClass,
+					body: msgAjaxError,
+					class: 'danger',
 					//icon: 'check',
 					action: 'show'
 				});
-				console.log(response.msg);
-			}, 1000);
+			}, 700);
 
-		}
+			loadingData = false;
 
-	})
-	.fail(function (jqXHR, status, errorThrown) {
-		console.log('recordsSendToRemoteServer: Fail: ');
-		console.log(jqXHR);
-		console.log(status);
-		console.log(errorThrown);
+			//console.log('Fail recordsSendToRemoteServer(): lead detail: (next line)');
+			//console.log(lead);
 
-		loadingData = false;
+		})
+		.always(function (response, status, xhr) {
 
-		//console.log('Fail recordsSendToRemoteServer(): lead detail: (next line)');
-		//console.log(lead);
+			console.log('recordsSendToRemoteServer always');
 
-	})
-	.always(function (response, status, xhr) {
-		console.log('recordsSendToRemoteServer always');
+			//$('#btn-sync-records').removeClass('loading').removeAttr('disabled');
+			btn.removeClass('loading').removeAttr('disabled');
 
-		//$('#btn-sync-records').removeClass('loading').removeAttr('disabled');
-		btn.removeClass('loading').removeAttr('disabled');
+			btn.off().one('click', function (e) {
+				//console.log('click 2');
+				recordsStartSync({ "e": e, "el": $(this) });
+			});
 
-		btn.off().one('click', function (e) {
-			//console.log('click 2');
-			recordsStartSync({ "e": e, "el": $(this) });
+			console.log('Leads > recordsSendToRemoteServer: End');
+
 		});
 
-	});
+	}, 1000);
 
-	console.log('Leads > recordsSendToRemoteServer: End');
 
 }
